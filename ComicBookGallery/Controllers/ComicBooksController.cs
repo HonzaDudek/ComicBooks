@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +11,11 @@ namespace ComicBookGallery.Controllers
         // GET
         public ActionResult Index()
         {
-            return
-            View();
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+            return Content("Hello from ComicBookController");
         }
     }
 }
