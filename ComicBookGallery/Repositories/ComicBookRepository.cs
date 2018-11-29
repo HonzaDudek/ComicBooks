@@ -61,14 +61,20 @@ namespace ComicBookGallery.Repositories
 
         public ComicBook getComicBook(int Id)
         {
-            if (Id < _comicBooks.Length)
+            foreach (var comicBook in _comicBooks)
             {
-                return _comicBooks[Id];
+                if (comicBook.Id == Id)
+                {
+                    return comicBook;
+                }
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
+
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
+        }
+
     }
 }
