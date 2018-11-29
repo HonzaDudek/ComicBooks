@@ -2,12 +2,12 @@
 {
     public class ComicBook
     {
-        private int Id { get; set; }
-        private string SeriesTitle { get; set; }
-        private int IssueNumber { get; set; }
-        private string DescriptionHTML { get; set; }
-        private Artist[] Artists { get; set; }
-        private bool Favorite { get; set; }
+        public int Id { get; set; }
+        public string SeriesTitle { get; set; }
+        public int IssueNumber { get; set; }
+        public string DescriptionHTML { get; set; }
+        public Artist[] Artists { get; set; }
+        public bool Favorite { get; set; }
         public string DisplayText => SeriesTitle + " #" + IssueNumber;
 
         public string CoverImageFileName => SeriesTitle.Replace(" ", "-")
