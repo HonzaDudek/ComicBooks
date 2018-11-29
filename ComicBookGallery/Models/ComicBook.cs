@@ -1,0 +1,12 @@
+﻿namespace ComicBookGallery.Models
+{
+    public class ComicBook
+    {
+        private int Id { get; set; }
+        private string SeriesTitle { get; set; }
+        private int IssueNumber { get; set; }
+        private string DescriptionHTML { get; set; }
+        private Artist[] Artists { get; set; }
+        private bool Favorite { get; set; }
+    }
+}

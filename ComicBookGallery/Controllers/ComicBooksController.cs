@@ -25,6 +25,8 @@ namespace ComicBookGallery.Controllers
                 "Letters: Chris Eliopoulos"
             };
 
+            Math.Pow(2, 5);
+            
             return View();
         }
     }
